@@ -1,0 +1,34 @@
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    margin: 20px auto;
+    animation: beat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 90px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart::before {
+    left: 50px;
+}
+
+.heart::after {
+    top: -50px;
+}
+
+@keyframes beat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
